@@ -4,9 +4,8 @@ This is a PHP based CPanel backup scripting solution I developed for one of the 
 
 It uses the CPanel [API 1](https://documentation.CPanel.net/display/SDK/Guide+to+CPanel+API+1) and [API 2](https://documentation.CPanel.net/display/SDK/Guide+to+CPanel+API+2) PHP code base.  
 
-This solution uses the CPanel [cron job manager](https://documentation.cpanel.net/display/ALD/Cron+Jobs) and schedules two scripts to run. One runs the `backup.php` file and the other runs the `cleanup.php` file. 
-[ ] You could run them nightly, the first at 10pm and the second at 11pm.  
-
+- [ ] This solution uses the CPanel [cron job manager](https://documentation.cpanel.net/display/ALD/Cron+Jobs) and schedules two scripts to run. One runs the `backup.php` file and the other runs the `cleanup.php` file. 
+- [ ] You could run them nightly, the first at 10pm and the second at 11pm.  
 
 This solution also requires: https://github.com/CPanelInc/xmlapi-php  
 
