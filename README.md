@@ -9,23 +9,23 @@ It uses the CPanel [API 1](https://documentation.CPanel.net/display/SDK/Guide+to
 
 This solution also requires: https://github.com/CPanelInc/xmlapi-php  
 
-To set it up, you could create a folder off the root of your CPanel home directory called "bin" and save all the files in there.  
+To set it up, you could create a folder off the root of your CPanel home directory called `bin` and save all the files in there.  
 
 Rename the file xmlapi.php to xmlapi.php.inc  
 
-You need to edit the config.php.inc file and enter the details for your particular CPanel account setup.  
+You need to edit the `config.php.inc` file and enter the details for your particular CPanel account setup.  
 
-The entries $backup_folder should specify the location where you want your backups to be saved to.  
+The entries `$backup_folder` should specify the location where you want your backups to be saved to.  
 
-You should also add that folder to your cpbackup-exclude.conf folder off the root of your home directory otherwise your full backup will include all your previous backups and keep growing.  
+You should also add that folder to your `cpbackup-exclude.conf` folder off the root of your home directory otherwise your full backup will include all your previous backups and keep growing.  
 
-The entry $retention specifies how many days of backup you want to store. In my case I am storing 5 days worth of backups.  
+The entry `$retention` specifies how many days of backup you want to store. In my case I am storing 5 days worth of backups.  
 
-strtotime("-5 days");  
+`strtotime("-5 days");`
 
 The cron job entries are as follows:  
-php -f /home/$youraccount/bin/backup.php  
-php -f /home/$youraccount/bin/cleanup.php  
+`/usr/bin/php -f /home/$youraccount/bin/backup.php`
+`/usr/bin/php -f /home/$youraccount/bin/cleanup.php`
 
 
 
